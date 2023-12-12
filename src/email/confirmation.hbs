@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nouvelle Commande</title>
+</head>
+
+<body>
+    <div>
+        <p style="margin: 0;text-align: center;">Cher <b>{{ userInformation.lastName }}
+                {{userInformation.firstName}}</b>,</p>
+        <p style="margin: 0;text-align: center;">Nous espérons que vous allez bien. Nous tenons à vous informer que nous
+            avons bien reçu votre commande sur
+            {{location.name}}</p>
+    </div>
+    <br>
+    <br>
+    <div>
+        <p style="margin-bottom: 20px;margin: 0;text-align: center;">voici le recapitulatif de la commande: </p>
+        <div>
+            {{#each cartItems}}
+            <div>
+                <img src="{{imageUrl}}" alt="image"
+                    style="width: 180px;height: 180px;border-radius: 5px;">
+                <p style="margin: 0;text-align: center;">{{product}}</p>
+                <p style="margin: 0;text-align: center;">{{quantity}}</p>
+                <p style="margin: 0;text-align: center;">{{price}} <b>XAF</b></p>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <br>
+    <div class="flex" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+        <p style="margin: 0;text-align: center;"><b>Montant total a payer:</b> {{totalPrice}} <b>XAF</b></p>
+        <p style="margin: 0;text-align: center;"><b>Nombre total d'articles</b> {{totalQuantity}}</p>
+        <p style="margin: 0;text-align: center;"><b>La methode de paiement:</b> {{payMentMethode}}</p>
+    </div>
+    <br>
+    <div>
+        <p style="margin: 0;text-align: center;">
+            Nous vous remercions pour votre confiance en notre plateforme et pour votre achat. le vendeur
+            {{location.name}} s'affaire à préparer votre commande avec le plus grand soin. Dès que votre commande sera
+            prête à être expédiée, vous recevrez une notification de notre part, accompagnée des détails d'expédition et
+            d'un numéro de suivi le cas
+            échéant.
+        </p>
+        <br>
+        <p style="margin: 0;text-align: center;">
+            En attendant, si vous avez des questions ou des demandes spécifiques concernant votre commande, n'hésitez
+            pas à contacter {{location.name}} à l'adresse {{location.email}} ou au numéro {{location.phoneNumber}}. Nous
+            sommes là pour vous aider.
+        </p>
+        <br>
+        <p style="margin: 0;text-align: center;">
+            Merci à nouveau pour votre confiance en notre plateforme. Nous sommes impatients de vous servir
+            et de vous offrir une expérience d'achat exceptionnelle.
+        </p>
+        <br>
+        <p style="margin: 0;text-align: center;">
+            Cordialement,
+        </p>
+    </div>
+    <br>
+    <div class="flex" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+        <p style="margin: 0;text-align: center;">Houlala Marketplace</p>
+        <p style="margin: 0;text-align: center;">service@houlala.store</p>
+        <p style="margin: 0;text-align: center;">+237 99 00 00 99</p>
+    </div>
+</body>
+
+</html>
